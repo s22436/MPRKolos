@@ -13,9 +13,10 @@ public class BankService {
     public BankService (UserStorage userStorage) {
         this.userStorage = userStorage;
     }
-    public void registerNewClient(float startingBalance){
+    public User registerNewClient(float startingBalance){
         User newUser = new User(String.valueOf(userStorage.getUsers().size()), startingBalance);
         userStorage.addUser(newUser);
+        return newUser;
     }
 
     public Transaction createBankTransfer(String userId, float amount){

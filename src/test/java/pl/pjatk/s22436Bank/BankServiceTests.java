@@ -38,6 +38,14 @@ public class BankServiceTests {
     }
 
     @Test
+    void shouldSuccessfullyRegisterNewUserWithCorrectBalance(){
+        //when
+        User user = bankService.registerNewClient(200);
+        //then
+        assertThat(user.getBalance()).isEqualTo(200);
+    }
+
+    @Test
     void shouldSuccessfullyTransferMoneyOutOfAccount(){
         //given
         User user = new User("11", 200);
