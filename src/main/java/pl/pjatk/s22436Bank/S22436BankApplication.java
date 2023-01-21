@@ -6,14 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class S22436BankApplication {
 
-	public S22436BankApplication(CarService carService) {
+	public S22436BankApplication(BankService bankService) {
 
-//		RentalInfo testRental = carService.rentCar(
-//				new User("1"), "9876",
-//				LocalDate.of(2022, 11, 23),
-//				LocalDate.of(2022, 11, 22)
-//		);
-//		System.out.println(testRental);
 	}
 
 	public static void main(String[] args) {
