@@ -32,4 +32,11 @@ public class User {
     public void addToBalance(float amount){
         this.balance += amount;
     }
+
+    @Override
+    public String toString() {
+        return "User - " +
+                "id: " + id  +
+                ", balance: " + balance;
+    }
 }

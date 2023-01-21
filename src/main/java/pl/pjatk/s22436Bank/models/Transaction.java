@@ -22,4 +22,13 @@ public class Transaction {
     public String getUserId() {
         return userId;
     }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "status=" + status +
+                ", newBalance=" + newBalance +
+                ", userId='" + userId + '\'' +
+                '}';
+    }
 }
