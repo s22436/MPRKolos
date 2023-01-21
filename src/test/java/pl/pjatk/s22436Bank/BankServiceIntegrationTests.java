@@ -2,10 +2,9 @@ package pl.pjatk.s22436Bank;
 
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import pl.pjatk.s22436Bank.models.Transaction;
 import pl.pjatk.s22436Bank.models.TransactionStatus;
 import pl.pjatk.s22436Bank.models.User;
@@ -15,13 +14,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
-public class BankServiceTests {
+@SpringBootTest
+public class BankServiceIntegrationTests {
 
-    @Mock
+    @MockBean
     private UserStorage userStorage;
 
-    @InjectMocks
+    @Autowired
     private BankService bankService;
 
 
